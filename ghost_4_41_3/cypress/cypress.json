@@ -1,0 +1,9 @@
+{
+    "usuario":"pruebas@ghost.com",
+    "pass":"Pruebas12345",
+    "screenshotsFolderscreenshotsFolder":"./capturas",
+    "trashAssetsBeforeRuns":true,
+    "viewportWidth": 1200,
+    "viewportHeight": 900
+
+}

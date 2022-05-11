@@ -16,7 +16,25 @@
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
+const fs = require('fs');
+const path = require('path');
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
+
+  on('before:spec',(spec) => {
+    dir = './cypress/screenshots/'+spec.name;
+
+    if (fs.existsSync(dir)){
+      fs.readdir(dir, (err, files) => {
+        if (err) throw err;
+        for (const file of files) {
+          fs.unlink(path.join(dir, file), err => {
+            if (err) throw err;
+          });
+        }
+      });
+    }
+
+  });
 }

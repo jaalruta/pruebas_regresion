@@ -9,8 +9,10 @@ describe ('crear pagina', function(){
       cy.get('#ember9').type(Cypress.config('pass'));
       cy.get('#ember11').click();
       cy.wait(2000);
+      cy.screenshot("screenshot1");
       cy.get('#ember28').click();
       cy.wait(3000);
+      cy.screenshot("screenshot2");
       cy.get('.ember-view.gh-btn.gh-btn-primary.view-actions-top-row').click();
       cy.get('.gh-editor-title.ember-text-area.gh-input.ember-view').type("Pagina de prueba");
       cy.wait(2000);

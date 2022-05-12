@@ -6,7 +6,7 @@ let featureName="";
 let screenshotCount = 1;
 let dir = '';
 Before((scenario) => {
-    featureName = scenario.gherkinDocument.feature.name.replace(" ","_");
+    featureName = scenario.gherkinDocument.feature.name.replace(/ /g,"_");
 
     dir = './capturas/'+featureName;
     if (!fs.existsSync(dir)){

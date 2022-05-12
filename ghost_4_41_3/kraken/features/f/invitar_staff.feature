@@ -1,4 +1,4 @@
-Feature: invitar stadd
+Feature: invitar staff
 
 @user1 @web
 
@@ -19,23 +19,39 @@ Scenario: Como usuario puedo invitar miembros al staff
   And I click next
 
   And I wait for 5 seconds
+
+  And I clear ghost data
+
+  And I wait for 2 seconds
+
+  And I take a screenshot
   
   And I click setting
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click staff
 
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   And I click invite people  
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I enter invite email "invete@ghost.com"
   
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click send invitation  
 
   And I wait for 2 seconds
+
+  And I take a screenshot

@@ -44,7 +44,7 @@ Scenario: Como usuario puedo invitar miembros al staff
 
   And I take a screenshot
 
-  And I enter invite email "invete@ghost.com"
+  And I enter invite email "invite3@ghost.com"
   
   And I wait for 2 seconds
 

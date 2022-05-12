@@ -44,7 +44,7 @@ Scenario: Como usuario puedo revocar la invitacion de miembros del staff
 
   And I take a screenshot
 
-  And I enter invite email "invite2@ghost.com"
+  And I enter invite email "invite6@ghost.com"
   
   And I wait for 2 seconds
 
@@ -60,13 +60,11 @@ Scenario: Como usuario puedo revocar la invitacion de miembros del staff
 
   And I wait for 2 seconds
 
-  And I take a screenshot
 
   And I click setting
 
   And I wait for 5 seconds
 
-  And I take a screenshot
 
   And I click staff
 

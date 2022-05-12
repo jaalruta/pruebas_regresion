@@ -10,6 +10,15 @@ describe ('cambiar lenguaje', function(){
         cy.get('#ember9').type(Cypress.config('pass'));
         cy.get('#ember11').click();
         cy.wait(5000);
+
+        cy.get(".gh-nav-body a[href='#/settings/']").click();
+        cy.get(".view-container a[href='#/settings/labs/']").click();
+        cy.get(".js-delete").click();
+        cy.wait(3000);
+        cy.get(".gh-btn.gh-btn-red.gh-btn-icon.ember-view").click();
+        cy.visit("http://localhost:2368/ghost");
+
+        cy.wait(2000);
         cy.get(".gh-nav-body a[href='#/settings/']").click();
         cy.wait(2000);
         cy.get(".view-container a[href='#/settings/general/']").click();

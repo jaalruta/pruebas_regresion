@@ -1,0 +1,10 @@
+{
+    "usuario":"pruebas@ghost.com",
+    "pass":"Pruebas12345",
+    "screenshotsFolderscreenshotsFolder":"./capturas",
+    "viewportWidth": 1200,
+    "viewportHeight": 660,
+    "experimentalInteractiveRunEvents": true,
+    "trashAssetsBeforeRuns":false,
+    "video":false
+}

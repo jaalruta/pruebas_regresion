@@ -1,8 +1,8 @@
-Feature: invitar staff
+Feature: crear post
 
 @user1 @web
 
-Scenario: Como usuario puedo invitar miembros al staff
+Scenario: Como usuario administrador inicio sesion y creo un post
 
   Given I navigate to page "http://localhost:2368/ghost"
 
@@ -22,36 +22,48 @@ Scenario: Como usuario puedo invitar miembros al staff
 
   And I clear ghost data
 
+  And I wait for 5 seconds
+
+  And I click posts
+
+  And I wait for 5 seconds
+
+  And I take a screenshot
+
+  And I click new posts
+
+  And I wait for 5 seconds
+
+  And I take a screenshot
+
+  And I enter post title "titulo de pruebas"
+
+  And I wait for 2 seconds
+
+  And I take a screenshot
+
+  And I enter post body "cuerpo del post de prueba"
+ 
+  And I wait for 2 seconds
+
+  And I take a screenshot
+
+  And I click publish menu
+
+  And I wait for 2 seconds
+
+  And I take a screenshot
+
+  And I click publish
+  
   And I wait for 2 seconds
 
   And I take a screenshot
   
-  And I click setting
+  And I click publish confirm
 
   And I wait for 2 seconds
 
   And I take a screenshot
 
-  And I click staff
-
-  And I wait for 2 seconds
-
-  And I take a screenshot
-
-  And I click invite people  
-
-  And I wait for 2 seconds
-
-  And I take a screenshot
-
-  And I enter invite email "invite3@ghost.com"
   
-  And I wait for 2 seconds
-
-  And I take a screenshot
-
-  And I click send invitation  
-
-  And I wait for 2 seconds
-
-  And I take a screenshot

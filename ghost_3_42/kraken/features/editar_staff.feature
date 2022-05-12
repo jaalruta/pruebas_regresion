@@ -1,8 +1,8 @@
-Feature: invitar staff
+Feature: revocar staff
 
 @user1 @web
 
-Scenario: Como usuario puedo invitar miembros al staff
+Scenario: Como usuario puedo editar la informacion de miembros del staff
 
   Given I navigate to page "http://localhost:2368/ghost"
 
@@ -23,7 +23,7 @@ Scenario: Como usuario puedo invitar miembros al staff
   And I clear ghost data
 
   And I wait for 2 seconds
-
+  
   And I take a screenshot
   
   And I click setting
@@ -38,20 +38,27 @@ Scenario: Como usuario puedo invitar miembros al staff
 
   And I take a screenshot
 
-  And I click invite people  
+  And I click over a staff member
 
   And I wait for 2 seconds
 
   And I take a screenshot
 
-  And I enter invite email "invite3@ghost.com"
-  
-  And I wait for 2 seconds
-
-  And I take a screenshot
-
-  And I click send invitation  
+  And I enter staff name "Pruebas modificacion staff"
 
   And I wait for 2 seconds
 
   And I take a screenshot
+
+  And I enter staff bio "Pruebas modificacion bio staff"
+
+  And I wait for 2 seconds
+
+  And I take a screenshot
+
+  And I click save
+
+  And I wait for 2 seconds
+
+  And I take a screenshot
+

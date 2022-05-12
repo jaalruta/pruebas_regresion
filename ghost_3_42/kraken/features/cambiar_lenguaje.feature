@@ -1,8 +1,8 @@
-Feature: invitar staff
+Feature: cambiar lenguaje publicacion
 
 @user1 @web
 
-Scenario: Como usuario puedo invitar miembros al staff
+Scenario: Como usuario puedo cambiar el lenguaje de publicacion de ghost
 
   Given I navigate to page "http://localhost:2368/ghost"
 
@@ -23,35 +23,35 @@ Scenario: Como usuario puedo invitar miembros al staff
   And I clear ghost data
 
   And I wait for 2 seconds
-
-  And I take a screenshot
   
+  And I take a screenshot
+
   And I click setting
 
   And I wait for 2 seconds
 
   And I take a screenshot
 
-  And I click staff
+  And I click general
 
   And I wait for 2 seconds
 
   And I take a screenshot
 
-  And I click invite people  
+  And I expand lenguage option
 
   And I wait for 2 seconds
 
   And I take a screenshot
 
-  And I enter invite email "invite3@ghost.com"
-  
+  And I enter lenguage "es"
+
+  And I take a screenshot
+
+  And I click save
+
   And I wait for 2 seconds
 
   And I take a screenshot
 
-  And I click send invitation  
-
-  And I wait for 2 seconds
-
-  And I take a screenshot
+  Then the lenguage must be "es"

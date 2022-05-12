@@ -26,5 +26,6 @@ describe ('crear', function(){
         cy.get('.gh-btn.gh-btn-black.gh-btn-icon.ember-view').click();
         cy.screenshot("screenshot7");
         cy.get('.ember-view.gh-editor-back-button').click();
+        cy.screenshot("screenshot8");
     })
 })

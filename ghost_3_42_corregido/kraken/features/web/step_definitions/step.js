@@ -117,49 +117,6 @@ When('I click Schedule it for later', async function() {
 })
 
 
-When('I click members', async function() {
-
-    let element = await this.driver.$(".gh-nav-body a[href='#/members/']");
-
-    return await element.click();
-
-})
-
-
-When('I click new member', async function() {
-
-    let element = await this.driver.$(".gh-canvas-header a[href='#/members/new/']");
-    return await element.click();
-
-})
-
-
-When('I enter member name {string}', async function (name) {
-
-    let element = await this.driver.$('#member-name');
-
-    return await element.setValue(name);
-
-});
-
-
-When('I enter member email {string}', async function (email) {
-
-    let element = await this.driver.$('#member-email');
-
-    return await element.setValue(email);
-
-});
-
-When('I enter member note {string}', async function (note) {
-
-    let element = await this.driver.$('#member-note');
-
-    return await element.setValue(note);
-
-});
-
-
 When('I click save', async function() {
 
     let element = await this.driver.$(".gh-btn.gh-btn-blue.gh-btn-icon.ember-view");
@@ -167,26 +124,7 @@ When('I click save', async function() {
 
 })
 
-When('I select a member', async function() {
 
-    let element = await this.driver.$(".gh-main tr:nth-child(2) a:nth-child(1)");
-    return await element.click();
-
-})
-
-When('I click config member', async function() {
-
-    let element = await this.driver.$(".view-actions .dropdown button.gh-btn-icon");
-    return await element.click();
-
-})
-
-When('I click delete member', async function() {
-
-    let element = await this.driver.$(".gh-member-actions-menu li:nth-child(2) button");
-    return await element.click();
-
-})
 
 When('I click confirm delete', async function() {
 
@@ -296,7 +234,7 @@ When('I enter staff bio {string}', async function (bio) {
 
 When('I click tags', async function() {
 
-    let element = await this.driver.$(".gh-nav-list a[href='#/tags/']"); 
+    let element = await this.driver.$(".ember-view a[href='#/tags/']"); 
 
     return await element.click();
 
@@ -325,16 +263,10 @@ When('I enter tag description {string}', async function (description) {
 
 });
 
-When('I select a tag edicion', async function() {
-
-    let element = await this.driver.$(".gh-canvas a[href='#/tags/segundo-tag/']"); 
-    return await element.click();
-
-});
 
 When('I select a tag borrado', async function() {
 
-    let element = await this.driver.$(".gh-canvas a[href='#/tags/prueba-borrado/']"); 
+    let element = await this.driver.$(".gh-canvas a[href='#/tags/pruebaborrado/']"); 
     return await element.click();
 
 });
@@ -346,51 +278,6 @@ When('I click delete tag', async function() {
 
 });
 
-
-Then('the lenguage must be {string}', async function (lenguage) {
-    let element = await this.driver.$("input[type='text']");
-    let valor = await element.getValue()
-    expect(valor).to.equal(lenguage);
-  });
-
-
-Then('the member must be created', async function () {
-    let element = await this.driver.$$('.gh-member-details-meta');
-    let valor = element.length >0 
-    expect(valor).to.equal(true);
-  });
-
-Then('the member name must be {string}', async function (name) {
-    let element = await this.driver.$('#member-name');
-    let valor = await element.getValue()
-    expect(valor).to.equal(name);
-  });
-
-Then('the member {string} must be delete', async function (name) {
-    let busqueda = "="+name;
-    let element = await this.driver.$$(busqueda);
-    let valor = element.length >0 
-    expect(valor).to.equal(false);
-});
-
-Then('the tag must be created', async function () {
-    let element = await this.driver.$$(".tags-list a[href='#/tags/primer-tag/']");
-    let valor = element.length >0
-    expect(valor).to.equal(true);
-  });
-
-Then('the tag name must be {string}', async function (name) {
-    let element = await this.driver.$('#tag-name');
-    let valor = await element.getValue()
-    expect(valor).to.equal(name);
-  });
-
-  Then('the tag {string} must be delete', async function (name) {
-    let busqueda = "="+name;
-    let element = await this.driver.$$(busqueda);
-    let valor = element.length >0 
-    expect(valor).to.equal(false);
-});
 
 When('I click post menu', async function() {
 
@@ -534,22 +421,36 @@ When('I enter title body {string}', async function (titulo) {
 
 When('I clear ghost data', async function () {
     
-    let element2 = await this.driver.$(".ember-view a[href='#/settings/labs/']");
-    await element2.click();
+    let element = await this.driver.$("#ember45");
+    await element.click();
     await this.driver.pause(2000);
-    let element3 = await this.driver.$(".js-delete");
-    await element3.click();
+    let element2 = await this.driver.$(".gh-btn.gh-btn-hover-red.js-delete");
+    await element2.click(); 
     await this.driver.pause(2000);
-    let element4 = await this.driver.$(".modal-footer .gh-btn-red");
-    await element4.click();
+    let element3 = await this.driver.$(".gh-btn.gh-btn-red.gh-btn-icon.ember-view");
+    await element3.click(); 
     await this.driver.pause(3000);
-    await this.driver.url('http://localhost:2368/ghost');
+    await this.driver.url('http://localhost:3001/ghost');
 
 });
 
 When('I take a screenshot', async function () {
     await this.driver.saveScreenshot(dir+'/screenshot'+screenshotCount+'.png');
     screenshotCount++;
+});
+
+Then('the lenguage must be {string}', async function (lenguage) {
+    let element = await this.driver.$("input[type='text']");
+    let valor = await element.getValue()
+    expect(valor).to.equal(lenguage);
+  });
+
+
+Then('the tag {string} must be delete', async function (name) {
+    let busqueda = "="+name;
+    let element = await this.driver.$$(busqueda);
+    let valor = element.length >0 
+    expect(valor).to.equal(false);
 });
 
 

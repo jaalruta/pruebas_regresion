@@ -21,7 +21,7 @@ Scenario: Como usuario administrador inicio sesion y elimino una etiqueta
   And I click new tag
   And I wait for 2 seconds
   And I take a screenshot
-  And I enter tag name "Prueba borrado"
+  And I enter tag name "PruebaBorrado"
   And I wait for 2 seconds
   And I take a screenshot
   And I enter tag description "descripcion de prueba borrado"

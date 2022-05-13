@@ -26,10 +26,6 @@ Scenario: Como usuario puedo cambiar el lenguaje de publicacion de ghost
   
   And I take a screenshot
 
-  And I click setting
-
-  And I wait for 2 seconds
-
   And I take a screenshot
 
   And I click general

@@ -12,18 +12,27 @@ Given I navigate to page "http://localhost:2368/ghost"
   And I wait for 2 seconds
   And I click next
   And I wait for 5 seconds
+  And I clear ghost data
+  And I wait for 2 seconds
+  And I take a screenshot
   And I click tags
-  And I wait for 5 seconds
+  And I wait for 2 seconds
+  And I take a screenshot
   And I click new tag
-  And I wait for 5 seconds
+  And I wait for 2 seconds
+  And I take a screenshot
   And I enter tag name "primer tag"
-  And I wait for 5 seconds
+  And I wait for 2 seconds
+  And I take a screenshot
   And I enter tag description "Esta es una descripción"
   And I wait for 2 seconds
+  And I take a screenshot
   And I click save 
   And I wait for 2 seconds
+  And I take a screenshot
   And I click tags
   And I wait for 2 seconds
+  And I take a screenshot
   Then the tag must be created
  
   

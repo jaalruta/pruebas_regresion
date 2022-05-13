@@ -1,8 +1,8 @@
-Feature: cambiar lenguaje publicacion
+Feature: crear post
 
 @user1 @web
 
-Scenario: Como usuario puedo cambiar el nombre de publicacion de ghost
+Scenario: Como usuario administrador inicio sesion y creo un post
 
   Given I navigate to page "http://localhost:2368/ghost"
 
@@ -22,41 +22,48 @@ Scenario: Como usuario puedo cambiar el nombre de publicacion de ghost
 
   And I clear ghost data
 
+  And I wait for 5 seconds
+
+  And I click posts
+
+  And I wait for 5 seconds
+
+  And I take a screenshot
+
+  And I click new posts
+
+  And I wait for 5 seconds
+
+  And I take a screenshot
+
+  And I enter post title "POST DE PRUEBA CREAR"
+
   And I wait for 2 seconds
+
+  And I take a screenshot
+
+  And I enter post body "PRUEBAS AUTOMATIZADAS MISO"
+ 
+  And I wait for 2 seconds
+
+  And I take a screenshot
+
+  And I click publish menu
+
+  And I wait for 2 seconds
+
+  And I take a screenshot
+
+  And I click publish
   
-  And I take a screenshot
-
-  And I click setting
-
-  And I wait for 2 seconds
-
-  And I take a screenshot
-
-  And I click general
-
-  And I wait for 2 seconds
-
-  And I take a screenshot
-
-  And I expand title option
-
-  And I wait for 2 seconds
-
-  And I take a screenshot
-
-  And I enter title body " MISO"
-
   And I wait for 2 seconds
 
   And I take a screenshot
   
-  And I click save
+  And I click publish confirm
 
   And I wait for 2 seconds
 
   And I take a screenshot
 
-
-
   
-

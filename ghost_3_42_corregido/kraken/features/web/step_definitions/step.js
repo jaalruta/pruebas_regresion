@@ -102,7 +102,7 @@ When('I click publish', async function() {
 
 When('I click publish confirm', async function() {
 
-    let element = await this.driver.$('.modal-footer button:nth-child(2)');
+    let element = await this.driver.$('.blue.link.fw4.flex.items-center.ember-view');
     return await element.click();
 
 })

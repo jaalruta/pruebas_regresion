@@ -229,7 +229,7 @@ When('I enter lenguage {string}', async function (lenguage) {
 
 When('I click staff', async function() {
 
-    let element = await this.driver.$(".view-container a[href='#/settings/staff/']");
+    let element = await this.driver.$(".ember-view a[href='#/staff/']");
     return await element.click();
 
 })
@@ -237,7 +237,7 @@ When('I click staff', async function() {
 
 When('I click invite people', async function() {
 
-    let element = await this.driver.$(".view-actions button.gh-btn-primary");
+    let element = await this.driver.$(".gh-btn.gh-btn-green");
     return await element.click();
 
 })
@@ -254,7 +254,7 @@ When('I enter invite email {string}', async function (email) {
 
 When('I click send invitation', async function() {
 
-    let element = await this.driver.$(".modal-footer button");
+    let element = await this.driver.$(".gh-btn.gh-btn-green.gh-btn-icon.ember-view");
     return await element.click();
 
 })

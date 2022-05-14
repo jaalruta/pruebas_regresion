@@ -137,21 +137,21 @@ async function creaPaginaSecundaria(resultado)
                             <div class="card-body">
                                 <h5 class="card-title">${resultado.descripcion1}</h5>
                             </div>
-                        <img src="assets/comparacion0/${data.origenA}" class="card-img-top" alt="...">
+                        <img src="assets/comparacion${resultado.id}/${data.origenA}" class="card-img-top" alt="...">
 
                         </div>
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">${resultado.descripcion2}</h5>
                             </div>
-                        <img src="assets/comparacion0/${data.origenB}" class="card-img-top" alt="...">
+                        <img src="assets/comparacion${resultado.id}/${data.origenB}" class="card-img-top" alt="...">
 
                         </div>
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Resultado regresión visual</h5>
                             </div>
-                        <img src="assets/comparacion0/${data.comparacion}" class="card-img-top" alt="...">
+                        <img src="assets/comparacion${resultado.id}/${data.comparacion}" class="card-img-top" alt="...">
                         </div>
                     </div>
                 </div>

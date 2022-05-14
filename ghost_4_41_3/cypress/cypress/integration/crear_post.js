@@ -22,10 +22,9 @@ describe ('crear', function(){
         cy.get('.ember-view.ember-basic-dropdown-trigger.gh-btn.gh-btn-editor.gh-publishmenu-trigger').click();
         cy.screenshot("screenshot5");
         cy.get('.gh-btn.gh-btn-black.gh-publishmenu-button.gh-btn-icon.ember-view').click();
-        cy.screenshot("screenshot6");
         cy.get('.gh-btn.gh-btn-black.gh-btn-icon.ember-view').click();
-        cy.screenshot("screenshot7");
+        cy.screenshot("screenshot6");
         cy.get('.ember-view.gh-editor-back-button').click();
-        cy.screenshot("screenshot8");
+        cy.screenshot("screenshot7");
     })
 })

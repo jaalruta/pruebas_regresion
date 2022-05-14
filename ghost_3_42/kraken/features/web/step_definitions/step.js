@@ -23,8 +23,6 @@ Before((scenario) => {
             }
           });
     }
-
-    console.log("acaaaaaaa--------");
 });
 
     
@@ -32,7 +30,7 @@ Before((scenario) => {
 
 When('I enter email {kraken-string}', async function (email) {
 
-    let element = await this.driver.$('#ember7');
+    let element = await this.driver.$('#ember8');
 
     return await element.setValue(email);
 
@@ -40,7 +38,7 @@ When('I enter email {kraken-string}', async function (email) {
 
 When('I enter password {kraken-string}', async function (password) {
 
-    let element = await this.driver.$('#ember9');
+    let element = await this.driver.$('#ember10');
 
     return await element.setValue(password);
 
@@ -48,7 +46,7 @@ When('I enter password {kraken-string}', async function (password) {
 
 When('I click next', async function() {
 
-    let element = await this.driver.$('#ember11');
+    let element = await this.driver.$('#ember12');
 
     return await element.click();
 
@@ -164,7 +162,7 @@ When('I enter member note {string}', async function (note) {
 
 When('I click save', async function() {
 
-    let element = await this.driver.$(".view-actions button.gh-btn-primary");
+    let element = await this.driver.$(".gh-btn.gh-btn-blue.gh-btn-icon.ember-view");
     return await element.click();
 
 })
@@ -207,14 +205,14 @@ When('I click setting', async function() {
 
 When('I click general', async function() {
 
-    let element = await this.driver.$(".view-container a[href='#/settings/general/']");
+    let element = await this.driver.$(".ember-view a[href='#/settings/general/']");
     return await element.click();
 
 })
 
 When('I expand lenguage option', async function() {
 
-    let element = await this.driver.$("body > div:nth-child(4) > div:nth-child(3) > main:nth-child(2) > section:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(3) > div:nth-child(1) > button:nth-child(2) > span:nth-child(1)");
+    let element = await this.driver.$("div[class='gh-setting-last'] div[class='gh-setting-action'] button[type='button']");
     return await element.click();
 
 })
@@ -222,7 +220,7 @@ When('I expand lenguage option', async function() {
 
 When('I enter lenguage {string}', async function (lenguage) {
 
-    let element = await this.driver.$('.ember-text-field.gh-input.ember-view');
+    let element = await this.driver.$("input[type='text']");
 
     return await element.setValue(lenguage);
 
@@ -350,7 +348,7 @@ When('I click delete tag', async function() {
 
 
 Then('the lenguage must be {string}', async function (lenguage) {
-    let element = await this.driver.$('.ember-text-field.gh-input.ember-view');
+    let element = await this.driver.$("input[type='text']");
     let valor = await element.getValue()
     expect(valor).to.equal(lenguage);
   });
@@ -536,10 +534,7 @@ When('I enter title body {string}', async function (titulo) {
 
 When('I clear ghost data', async function () {
     
-    let element = await this.driver.$(".gh-nav-body a[href='#/settings/']");
-    await element.click();
-    await this.driver.pause(2000);
-    let element2 = await this.driver.$(".view-container a[href='#/settings/labs/']");
+    let element2 = await this.driver.$(".ember-view a[href='#/settings/labs/']");
     await element2.click();
     await this.driver.pause(2000);
     let element3 = await this.driver.$(".js-delete");

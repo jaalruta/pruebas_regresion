@@ -20,25 +20,41 @@ Scenario: Como usuario puedo cambiar el nombre de publicacion de ghost
 
   And I wait for 5 seconds
 
+  And I clear ghost data
+
+  And I wait for 2 seconds
+  
+  And I take a screenshot
+
   And I click setting
 
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   And I click general
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I expand title option
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I enter title body " MISO"
 
   And I wait for 2 seconds
+
+  And I take a screenshot
   
   And I click save
 
   And I wait for 2 seconds
+
+  And I take a screenshot
 
 
 

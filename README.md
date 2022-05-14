@@ -160,3 +160,49 @@ Luego podremos seleccionar cualquier test del listado , se abrirá un navegador 
 ![Captura de pantalla 2022-05-05 a la(s) 11 00 51 p  m](https://user-images.githubusercontent.com/98671337/167064809-25649edc-bdf5-4f3c-b95c-e08eb8ab2f3f.png)
 
 
+# Generación de reporte de regresión
+
+Dentro del repositorio existe una carpeta que se llama ***regresion*** , en esta carpeta se encuentra el script que genera el reporte , para configurar el reporte se debe tener en cuenta lo siguiente
+
+## Archivo de configuración
+
+El archivo ***config.json*** contiene la configuración del reporte ,  a continuacion se explicaran las opciones de configuración 
+- titulo_reporte : Sera el titulo del reporte general
+- destino_reporte : Es el path en donde se ubicara el reporte de resultados
+- comparaciones : es un arreglo en el cual se asocian los directorios a comparar y el nombre del escenario de comparacion.
+   - nombre : Nombre del escenario
+   - directorio1 : Directorio 1 a comparar
+   - directorio2 : Diretorio 2 a comparar
+- resemble_config : Es un objeto con la configuracion de resemble 
+
+## Consideraciones antes de correr el reporte
+- Ambos directorios deben tener la misma cantidad de imagenes
+- La extension de la imagen debe ser ***png***
+- Se debe validar que las rutas de comparacion en el archivo de configuración esten correctas
+- Es ideal que los nombres de las imagenes a comparar sea el mismo debido a que el script recorre las imagenes en orden ascendente
+## Correr el reporte
+
+La primera vez que se ingresa al directorio se debe correr el comando 
+
+ ```
+  npm install
+ ```
+
+con esto se instalaran las dependencias necesarias para la correcta ejecucion del reporte.
+
+Luego se debe ejecutar el comando 
+
+ ```
+  node index.js
+ ```
+  
+ Con esto se iniciara la comparacion y se generara el reporte de regresion visual
+ 
+ Se generara una pagina principal con las comparaciones generadas
+ ![Captura de pantalla 2022-05-14 a la(s) 9 16 44 a  m](https://user-images.githubusercontent.com/98671337/168429611-a3d4f9da-c720-4f4e-9e49-241301561854.png)
+
+y para cada comparacion un reporte detallado 
+![Captura de pantalla 2022-05-14 a la(s) 9 16 51 a  m](https://user-images.githubusercontent.com/98671337/168429633-86576627-f695-47c1-9c9b-f78b61df8c92.png)
+
+
+ 

@@ -16,8 +16,13 @@
             "nombre":"eliminar etiqueta",
             "diretorio1": {"ruta":"../ghost_4_41_3/kraken/capturas/eliminar_etiqueta/","descripcion":"Ghost 4.41.3"},
             "diretorio2": {"ruta":"../ghost_3_42_corregido/kraken/capturas/eliminar_etiqueta/","descripcion":"Ghost 3.42.0"}
+        },
+        {
+            "nombre":"crear post",
+            "diretorio1": {"ruta":"../ghost_4_41_3/kraken/capturas/crear_post/","descripcion":"Ghost 4.41.3"},
+            "diretorio2": {"ruta":"../ghost_3_42_corregido/kraken/capturas/crear_post/","descripcion":"Ghost 3.42.0"}
         }
-        
+
     ],
     "resemble_config": {
         "output": {

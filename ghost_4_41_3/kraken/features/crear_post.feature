@@ -36,13 +36,13 @@ Scenario: Como usuario administrador inicio sesion y creo un post
 
   And I take a screenshot
 
-  And I enter post title "titulo de pruebas"
+  And I enter post title "POST DE PRUEBA CREAR"
 
   And I wait for 2 seconds
 
   And I take a screenshot
 
-  And I enter post body "cuerpo del post de prueba"
+  And I enter post body "PRUEBAS AUTOMATIZADAS MISO"
  
   And I wait for 2 seconds
 

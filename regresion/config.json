@@ -1,0 +1,32 @@
+{
+    "titulo_reporte" : "Resultados Regresion",
+    "destino_reporte": "./reporte_final",
+    "comparaciones":[
+        {
+            "nombre":"cambiar lenguaje",
+            "diretorio1": {"ruta":"../ghost_4_41_3/kraken/capturas/cambiar_lenguaje_publicacion/","descripcion":"Ghost 4.41.3"},
+            "diretorio2": {"ruta":"../ghost_3_42_corregido/kraken/capturas/cambiar_lenguaje_publicacion/","descripcion":"Ghost 3.42.0"}
+        },
+        {
+            "nombre":"reversar staff",
+            "diretorio1": {"ruta":"../ghost_4_41_3/kraken/capturas/invitar_staff/","descripcion":"Ghost 4.41.3"},
+            "diretorio2": {"ruta":"../ghost_3_42_corregido/kraken/capturas/invitar_staff/","descripcion":"Ghost 3.42.0"}
+        }
+
+    ],
+    "resemble_config": {
+        "output": {
+            "errorColor": {
+                "red": 255,
+                "green": 0,
+                "blue": 255
+            },
+            "errorType": "movement",
+            "largeImageThreshold": 1200,
+            "useCrossOrigin": false,
+            "outputDiff": true
+        },
+        "scaleToSameSize": true,
+        "ignore": "antialiasing"
+    }
+}

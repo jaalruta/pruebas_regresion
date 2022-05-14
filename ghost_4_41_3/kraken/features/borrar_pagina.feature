@@ -18,10 +18,6 @@ Scenario: Como usuario administrador inicio sesion, creo un post y lo elimino
 
   And I click next
 
-  And I wait for 5 seconds
-
-  And I clear ghost data
-
   And I wait for 2 seconds
   
   And I take a screenshot
@@ -38,7 +34,7 @@ Scenario: Como usuario administrador inicio sesion, creo un post y lo elimino
 
   And I take a screenshot
 
-  And I enter pages title "titulo de pagina"
+  And I enter pages title "titulo de la pagina"
 
   And I wait for 2 seconds
 

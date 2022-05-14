@@ -24,25 +24,37 @@ Scenario: Como usuario administrador inicio sesion, creo un post y lo elimino
 
   And I wait for 5 seconds
 
+  And I take a screenshot
+
   And I click new pages
 
   And I wait for 5 seconds
+
+  And I take a screenshot
 
   And I enter pages title "titulo de pagina"
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I enter pages body "cuerpo de la pagina de prueba"
  
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   And I click publish menu
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click publish
   
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   And I click pages menu 
 
@@ -50,22 +62,35 @@ Scenario: Como usuario administrador inicio sesion, creo un post y lo elimino
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click pages edit
 
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   And I enter pages title " Pagina editado"
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click publish menu
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click publish
   
   And I wait for 2 seconds
+
+  And I take a screenshot
   
   And I click pages menu
 
   And I wait for 2 seconds
+
+  And I take a screenshot
+  

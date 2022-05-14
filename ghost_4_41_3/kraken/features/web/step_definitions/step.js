@@ -510,11 +510,17 @@ When('I expand zone option', async function() {
 
 })
 
+When('I click zone option', async function() {
+
+  let element = await this.driver.$("#timezone");
+  return await element.click();
+
+}) 
+
 When('I choose zone option', async function() {
 
-  let element = await this.driver.$("select");
-  return await element.select(Pacific/Pago_Pago);
-
+  let element = await this.driver.$("select :nth-child(4)");
+  return await element.click();
 }) 
 
 When('I expand title option', async function() {

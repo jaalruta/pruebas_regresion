@@ -38,7 +38,7 @@ Scenario: Como usuario administrador inicio sesion y creo un post que se publica
 
   And I take a screenshot
 
-  And I enter post title "POST DE PRUEBAS PROGRAMADO"
+  And I enter post title "POST DE PRUEBAS PROGRAMADO "
 
   And I wait for 2 seconds
 

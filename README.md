@@ -171,7 +171,7 @@ El archivo ***config.json*** contiene la configuración del reporte ,  a continu
 - destino_reporte : Es el path en donde se ubicara el reporte de resultados
 - comparaciones : es un arreglo en el cual se asocian los directorios a comparar y el nombre del escenario de comparacion.
    - nombre : Nombre del escenario
-   - diretorio1 : Directorio 1 a comparar
+   - directorio1 : Directorio 1 a comparar
    - directorio2 : Diretorio 2 a comparar
 - resemble_config : Es un objeto con la configuracion de resemble 
 

@@ -322,4 +322,4 @@ async function pruebaRegresion()
 
 
 
-(async ()=>console.log(await pruebaRegresion()))();
+(async ()=> await pruebaRegresion())();

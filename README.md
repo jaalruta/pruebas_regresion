@@ -9,6 +9,36 @@ Nuestro equipo está conformado por 4 integrantes.
 
 # Pruebas de regresion visual
 
+## Estructura del repositorio
+En el repositorio se podran encontrar cuatro carpetas las cuales se explicaran a continuacion
+- ghost_3_42 : Contiene los 40 escenarios realizados para la version 4.41.3 de ghost , al correr los escenarios se presentan fallas ya que los ids de los campos son totalmente diferentes 
+  - cypress : Pruebas realizadas con cypress
+  - Kraken : Pruebas realizadas con kraken
+- ghost_3_42_corregido: Contiene los 10 escenarios (5 para kraken y 5 para cypress) ajustados a esta version.
+  - cypress : Pruebas realizadas con cypress
+  - Kraken : Pruebas realizadas con kraken
+- ghost_4_41_3 : Contien los 40 escenarios iniciales de la entrega de la semana 5
+  - cypress : Pruebas realizadas con cypress
+  - Kraken : Pruebas realizadas con kraken
+- regresion : Contiene el script que genere el reporte , en la seccion ***Correr el reporte*** se explica las condiciones de ejecucion y la forma de ejecutar el script
+
+## Impacto en la ejecucion de las pruebas de la version 4.41.3 sobre la version 3.42.0
+
+En general todas las pruebas fallaron inicialmente debido a que los ids del login cambiaron , se ajusto el login pero las pruebas siguiero fallando ya que los pasos para generar la misma funcioalidad son diferentes entre las versiones , en conclusion el impacto fue muy alto ya que ninguna prueba funciono.
+
+## Implementacion de captura de pantalla
+
+Para implementar la captura de pantalla se realizo lo siguiente
+
+- Kraken : 
+  En el archivo de step.js definimos un hook el cual se denomina Before , en este hook capturamos el nombre del feature que se esta ejecutando y lo     guardamos en una variable global , luego de esto creamos el directorio donde se guardaran las capturas que sera llamado "capturas" y dentro de este directorio crearemos una carpeta para cada feature tomando el nombre del feature que capturamos , si existe ya una carpeta con el nombre del feature borramos el contenido para generar de nuevo las capturas.
+  
+  Tambien se definio un contador para que cada vez que se tome una captura se incremente y asi manejar un consecutivo en los nombres de las imagenes, las imagenes son tomadas en el When "I take a screenshot" , por defecto el nombre de la imagen sera "screenshot" seguido del valor del contador y la extension png.
+  
+- Cypress : 
+  Dentro de cada archivo de la carpeta integation implementamos la funcionalidad para tomar capturas de pantalla, a diferencia de kraken en este archivo se debe indicar el nombre del archivo incluyendo el consecutivo.
+  
+
 ## Sistema Bajo Pruebas
 
 El sistema bajo pruebas usado es [Ghost](https://ghost.org/) en su versión 4.41.3. y la version 3.42.0
@@ -52,13 +82,7 @@ A continuación se listan los escenarios generados los cuales usan varias funcio
 19. Revocar invitación staff : En este escenario se inicia sesión , se usa el botón de configuración, se ingresa a la opción de staff y se revoca la invitación de un miembro que aún no aceptara la invitación.
 20. editar staff : En este escenario se inicia sesión , se usa el botón de configuración, se ingresa a la opción de staff , se selecciona un miembro del staff y se realiza la actualizacion de datos.
 
-## Impacto en la ejecucion de las pruebas de la version 4.41.3 sobre la version 3.42.0
 
-- Login : error por selector
-- Editar : error por selector
-- Invitar : error por selector
-- Revocar : error por selector
-- editar : error por selector
 
 
 
@@ -70,7 +94,8 @@ A continuación se listan los escenarios generados los cuales usan varias funcio
 - [git](https://git-scm.com/)
 - [Google Chrome](https://www.google.com/intl/es-419/chrome/)
 - adb (android debub bridge) Instrucciones de instalacion en mac en este [link](https://stackoverflow.com/questions/17901692/set-up-adb-on-mac-os-x) , para windows en este [link](https://youtu.be/tYY7FTV31vM) , para linux en este [link](https://blog.desdelinux.net/como-instalar-adb-shell-y-fastboot-en-linux/)
-- [Ghost](https://ghost.org/) version 4.41.3 , para la instalacion se debe crear un directorio vacio y correr los siguientes comandos dentro del directorio creado
+- [Ghost](https://ghost.org/) version 4.41.3 y version 3.42 , para la instalacion se debe crear un directorio vacio y correr los siguientes comandos dentro del directorio creado (el siguiente ejemplo es para la version 4.41.3 , se debera realiza lo mismo en directorio diferente para la version 3.42) 
+
   ```
   npm install ghost-cli@latest -g
   ```
@@ -87,6 +112,14 @@ A continuación se listan los escenarios generados los cuales usan varias funcio
   npm install -g cypress
   ```
 
+si se quiere parar la ejecucion de una version de ghost se debe usar el comando 
+
+  ```
+  ghost stop
+  ```
+
+- La url de ghost debera ser http://localhost:2368/ es decir debe estar corriendo en la maquina local y en el puerto 2368
+
 ## Ejecución de pruebas
 
 Cuando tengamos listos los requisitos podremos clonar el repositorio usando el comando
@@ -95,10 +128,9 @@ Cuando tengamos listos los requisitos podremos clonar el repositorio usando el c
 git clone <URL_REPOSITORIO>
 ```
 
-esto nos generará un directorio con las carpetas kraken y cypress , en cada carpeta están las pruebas generadas para la herramienta correspondiente
+esto nos generará un directorio con las carpetas ghost_3_42,ghost_3_42_corregido,ghost_4_41_3 y regresion , la explicacion de cada carpeta esta en la seccion previa llamada ***Estructura del repositorio***
 
-
-![Captura de pantalla 2022-05-05 a la(s) 10 28 12 p  m](https://user-images.githubusercontent.com/98671337/167062232-b980945f-e6ef-4a88-9f27-0823f47cce15.png)
+![Captura de pantalla 2022-05-14 a la(s) 7 18 33 p  m](https://user-images.githubusercontent.com/98671337/168452337-8e4036a5-167a-47ac-9bb2-7a46000398fc.png)
 
 
 ### Inicialización de ghost
@@ -117,7 +149,7 @@ Se debe configurar el usuario y clave de administrador de Ghost , para esto nos 
 
 
 
-Para la ejecución de pruebas en kraken debemos dirigirnos al directorio kraken usando la consola bash , dentro de este directorio usaremos el comando
+Para la ejecución de pruebas en kraken debemos dirigirnos al directorio kraken de la version de ghost que queramos probar usando la consola bash , dentro de este directorio usaremos el comando
 
 ```
 npm install
@@ -133,7 +165,7 @@ se abre chrome y se comenzarán a ejecutar las pruebas
 
 ### Ejecución de pruebas con Cypress
 
-Se debe configurar el usuario y clave de administrador de Ghost , para esto nos dirigiremos al archivo /cypress/cypress.json , debemos editarlo y agregar el usuario y la contraseña, a continuación se visualiza un ejemplo :
+Se debe configurar el usuario y clave de administrador de Ghost , para esto nos dirigiremos al archivo /cypress/cypress.json del directorio con la version de ghost que queremos probar, debemos editarlo y agregar el usuario y la contraseña, a continuación se visualiza un ejemplo :
 
 ![Captura de pantalla 2022-05-05 a la(s) 11 49 07 p  m](https://user-images.githubusercontent.com/98671337/167069026-5cfb1e10-e713-4f36-af41-96fc9a282024.png)
 
@@ -148,7 +180,7 @@ Se abrirá la siguiente interfaz
 ![Captura de pantalla 2022-05-05 a la(s) 10 55 31 p  m](https://user-images.githubusercontent.com/98671337/167064359-f65996fc-0d57-435c-b379-aa8b2868c936.png)
 
 
-Debemos seleccionar la carpeta cypress del repositorio clonado
+Debemos seleccionar la carpeta cypress del directorio con la version de ghost que queremos probar obtenidas del repositorio clonado
 ![Captura de pantalla 2022-05-05 a la(s) 10 57 06 p  m](https://user-images.githubusercontent.com/98671337/167064499-af4e49ab-760b-4bc8-a9fd-35e4c9069dbf.png)
 
 En este punto se nos permitirá ejecutar los test, para los test sobre Ghost debemos buscar la sección ***3-Ghost***
@@ -172,7 +204,7 @@ El archivo ***config.json*** contiene la configuración del reporte ,  a continu
 - comparaciones : es un arreglo en el cual se asocian los directorios a comparar y el nombre del escenario de comparacion.
    - nombre : Nombre del escenario
    - directorio1 : Directorio 1 a comparar
-   - directorio2 : Diretorio 2 a comparar
+   - directorio2 : Directorio 2 a comparar
 - resemble_config : Es un objeto con la configuracion de resemble 
 
 ## Consideraciones antes de correr el reporte

@@ -236,5 +236,6 @@ Luego se debe ejecutar el comando
 y para cada comparacion un reporte detallado 
 ![Captura de pantalla 2022-05-14 a la(s) 9 16 51 a  m](https://user-images.githubusercontent.com/98671337/168429633-86576627-f695-47c1-9c9b-f78b61df8c92.png)
 
+##Acceso al reporte de incidencias
+Los accesos al reporte de incidencias estaran ***en el mensaje del cuerpo de la entrega***, esto debido a que contienen usuario y contraseña de Jira
 
- 

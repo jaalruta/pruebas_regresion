@@ -128,7 +128,7 @@ async function creaPaginaSecundaria(resultado)
             <div class="row pt-3">
                 <div class="col-12">
                     <div class="alert alert-success" role="alert">
-                        Paso ${contador} , porcentaje de similitud ${data.diferencia} %
+                        Paso ${contador} , porcentaje de diferencias ${data.diferencia} %
                     </div>
                 </div>
                 <div class="col-12">
@@ -263,8 +263,10 @@ async function pruebaRegresion()
            let archivos1 = await obtieneArchivos(ruta_iteracion1,"png");
            let archivos2 = await obtieneArchivos(ruta_iteracion2,"png");
            let resultadoComparacion = [];
+           console.log(chalk.yellow('Comparando '+nombre));
            for (x in archivos1)
            {
+               
                let comp1= ruta_iteracion1+path.sep+archivos1[x];
 
                if(!archivos2[x])

@@ -3,24 +3,34 @@
     "destino_reporte": "./reporte_final",
     "comparaciones":[
         {
-            "nombre":"cambiar lenguaje",
+            "nombre":"cambiar lenguaje kraken",
             "diretorio1": {"ruta":"../ghost_4_41_3/kraken/capturas/cambiar_lenguaje_publicacion/","descripcion":"Ghost 4.41.3"},
             "diretorio2": {"ruta":"../ghost_3_42_corregido/kraken/capturas/cambiar_lenguaje_publicacion/","descripcion":"Ghost 3.42.0"}
         },
         {
-            "nombre":"reversar staff",
+            "nombre":"invitar staff kraken",
             "diretorio1": {"ruta":"../ghost_4_41_3/kraken/capturas/invitar_staff/","descripcion":"Ghost 4.41.3"},
             "diretorio2": {"ruta":"../ghost_3_42_corregido/kraken/capturas/invitar_staff/","descripcion":"Ghost 3.42.0"}
         },
         {
-            "nombre":"eliminar etiqueta",
+            "nombre":"eliminar etiqueta kraken",
             "diretorio1": {"ruta":"../ghost_4_41_3/kraken/capturas/eliminar_etiqueta/","descripcion":"Ghost 4.41.3"},
             "diretorio2": {"ruta":"../ghost_3_42_corregido/kraken/capturas/eliminar_etiqueta/","descripcion":"Ghost 3.42.0"}
         },
         {
-            "nombre":"crear post",
+            "nombre":"crear post kraken",
             "diretorio1": {"ruta":"../ghost_4_41_3/kraken/capturas/crear_post/","descripcion":"Ghost 4.41.3"},
             "diretorio2": {"ruta":"../ghost_3_42_corregido/kraken/capturas/crear_post/","descripcion":"Ghost 3.42.0"}
+        },
+        {
+            "nombre":"cambiar lenguaje cypress",
+            "diretorio1": {"ruta":"../ghost_4_41_3/cypress/cypress/screenshots/cambiar_lenguaje.js/","descripcion":"Ghost 4.41.3"},
+            "diretorio2": {"ruta":"../ghost_3_42_corregido/cypress/cypress/screenshots/cambiar_lenguaje.js","descripcion":"Ghost 3.42.0"}
+        },
+        {
+            "nombre":"invitar staff cypress",
+            "diretorio1": {"ruta":"../ghost_4_41_3/cypress/cypress/screenshots/invitar_staff.js/","descripcion":"Ghost 4.41.3"},
+            "diretorio2": {"ruta":"../ghost_3_42_corregido/cypress/cypress/screenshots/invitar_staff.js","descripcion":"Ghost 3.42.0"}
         }
 
     ],

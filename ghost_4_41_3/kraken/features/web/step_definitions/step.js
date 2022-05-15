@@ -23,8 +23,6 @@ Before((scenario) => {
             }
           });
     }
-
-    console.log("acaaaaaaa--------");
 });
 
     

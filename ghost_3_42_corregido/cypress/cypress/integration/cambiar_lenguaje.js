@@ -25,20 +25,21 @@ describe ('cambiar lenguaje', function(){
         cy.wait(2000);
 
         cy.screenshot("screenshot2");
+        cy.screenshot("screenshot3");
         cy.wait(2000);
 
 
         cy.get("div[class='gh-setting-last'] div[class='gh-setting-action'] button[type='button']").click();
         cy.wait(2000);
-        cy.screenshot("screenshot3");
+        cy.screenshot("screenshot4");
 
         
         cy.get("input[type='text']").type('{selectall}{backspace}es');
-        cy.screenshot("screenshot4");
+        cy.screenshot("screenshot5");
 
         cy.get(".gh-btn.gh-btn-blue.gh-btn-icon.ember-view").click();
         cy.wait(2000);
-        cy.screenshot("screenshot5");
+        cy.screenshot("screenshot6");
         cy.get("input[type='text']").should('have.value', 'es')
     })
 })

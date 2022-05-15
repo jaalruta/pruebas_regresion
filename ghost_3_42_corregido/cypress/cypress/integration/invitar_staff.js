@@ -25,20 +25,21 @@ describe ('Invitar staff', function(){
         cy.get("body > div:nth-child(4) > div:nth-child(3) > nav:nth-child(1) > section:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > a:nth-child(1)").click();
         cy.wait(2000);
         cy.screenshot("screenshot2");
+        cy.screenshot("screenshot3");
 
         cy.get(".gh-btn.gh-btn-green").click();
         cy.wait(2000);
 
-        cy.screenshot("screenshot3");
+        cy.screenshot("screenshot4");
 
         cy.get('#new-user-email').type('invite3@ghost.com');
         cy.wait(2000);
 
-        cy.screenshot("screenshot4");
+        cy.screenshot("screenshot5");
 
         cy.get(".gh-btn.gh-btn-green.gh-btn-icon.ember-view").click();
         cy.wait(2000);
-        cy.screenshot("screenshot5");
+        cy.screenshot("screenshot6");
         cy.reload();
         cy.wait(5000);
 

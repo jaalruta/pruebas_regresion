@@ -39,6 +39,7 @@ bld/
 #node
 node_modules
 reports
+reporte_final
 
 .DS_Store
 

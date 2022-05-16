@@ -31,6 +31,11 @@
             "nombre":"invitar staff cypress",
             "diretorio1": {"ruta":"../ghost_4_41_3/cypress/cypress/screenshots/invitar_staff.js/","descripcion":"Ghost 4.41.3"},
             "diretorio2": {"ruta":"../ghost_3_42_corregido/cypress/cypress/screenshots/invitar_staff.js","descripcion":"Ghost 3.42.0"}
+        },
+        {
+          "nombre":"crear pagina cypress",
+          "diretorio1": {"ruta":"../ghost_4_41_3/cypress/cypress/screenshots/crear_pagina.js/","descripcion":"Ghost 4.41.3"},
+          "diretorio2": {"ruta":"../ghost_3_42_corregido/cypress/cypress/screenshots/crear_pagina.js","descripcion":"Ghost 3.42.0"}
         }
 
     ],

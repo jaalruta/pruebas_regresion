@@ -1,8 +1,8 @@
-Feature: editar pagina
+Feature: crear pagina
 
 @user1 @web
 
-Scenario: Como usuario administrador inicio sesion, creo un post y lo elimino 
+Scenario: Como usuario administrador inicio sesion y creo un post
 
   Given I navigate to page "http://localhost:2368/ghost"
 
@@ -19,6 +19,8 @@ Scenario: Como usuario administrador inicio sesion, creo un post y lo elimino
   And I click next
 
   And I wait for 5 seconds
+
+  And I take a screenshot
 
   And I click pages
 
@@ -52,44 +54,6 @@ Scenario: Como usuario administrador inicio sesion, creo un post y lo elimino
 
   And I click publish
   
-  And I wait for 2 seconds
-
-  And I take a screenshot
-
-  And I click pages menu 
-
-  And I wait for 2 seconds
-
-  And I wait for 2 seconds
-
-  And I take a screenshot
-
-  And I click pages edit
-
-  And I wait for 2 seconds
-
-  And I take a screenshot
-
-  And I enter pages title " Pagina editado"
-
-  And I wait for 2 seconds
-
-  And I take a screenshot
-
-  And I click publish menu
-
-  And I wait for 2 seconds
-
-  And I take a screenshot
-
-  And I click publish
-  
-  And I wait for 2 seconds
-
-  And I take a screenshot
-  
-  And I click pages menu
-
   And I wait for 2 seconds
 
   And I take a screenshot
